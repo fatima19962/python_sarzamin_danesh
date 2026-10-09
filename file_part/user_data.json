@@ -1,0 +1,13 @@
+{
+    "name": "erfan",
+    "family": "mahigir",
+    "name2": "فاطمه",
+    "phone": "0912",
+    "skills": [
+        "python",
+        "sql",
+        "AI",
+        "Web"
+    ],
+    "is_active": true
+}
