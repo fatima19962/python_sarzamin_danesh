@@ -1,0 +1,52 @@
+.box {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
+
+.box li {
+    margin-bottom: 5px;
+    opacity: 0; /* important */
+    animation: fadeIn 0.5s forwards;
+}
+
+li:nth-child(1){
+    animation-delay: 0.5s;
+}
+
+li:nth-child(2){
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.box li label {
+    display: block;
+    padding: 10px;
+    background: #323232;
+    color: rgb(239,227,0);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.box li label:hover {
+    background: #131313;
+    color: rgb(190, 159, 1);
+}
+
+.description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* This now works */
+.box input:checked ~ .description {
+    max-height: 250px;
+    overflow: auto;
+}

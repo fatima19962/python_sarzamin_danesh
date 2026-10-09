@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="custom_audio_player">
+      <audio src="../media/sounds/m.mp3" id="audio_source"></audio>
+      <button class="play_button">&#9658;</button>
+      <input
+        type="range"
+        name="timeline"
+        title="timeline"
+        class="progress_bar"
+        id="timeline"
+        value="0"
+      />
+      <button class="mute_btn">🔈</button>
+      <input type="range" name="volumeSlider" id="volumeSlider" class="volume_slider" min="0" max="1" step="0.1" value="1">
+    </div>
+    <audio src="../media/sounds/m.mp3" controls></audio>
+  
+    <a href="https://causticsodaglobal.com/">Visit Caustic Soda Global</a>
+    <script>
+        const audio=document.getElementById('audio_source');
+        const btnplay=document.querySelector('.play_button');
+        const progressBar=document.querySelector('.progress_bar');
+        btnplay.addEventListener('click',()=>{
+            if(audio.paused){
+                audio.play();
+                btnplay.textContent='\u{23F8}';
+            }else{
+                audio.pause();
+                btnplay.textContent='\u{25B6}';
+            }
+        });
+        audio.addEventListener('timeupdate',()=>{
+            const progress=(audio.currentTime/audio.duration)*100;
+            progressBar.value=progress;
+        });
+    </script>
+  </body>
+</html>

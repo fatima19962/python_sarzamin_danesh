@@ -1,0 +1,97 @@
+audio{
+    margin-top: 250px;
+    width: 90%;
+    height: 50px;
+    /* margin: 20px auto; */
+    padding: 10px;
+    display: block;
+    background-color: #f7f6f6;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    box-shadow: 0 20px 5px rgba(0, 0, 0,0.2);
+    
+}
+audio{
+    /* display: none !important; */
+}
+/* audio::-webkit-media-controls{
+    display: none !important;
+} */
+ /* audio::-webkit-media-controls-play-button,
+ audio::-webkit-media-controls-pause-button{
+    background-color: #3498db;
+    border-radius: 50%;
+    color: #f0f0f0 !important;
+ } */
+
+  audio::-webkit-media-controls-play-button{
+    background-color: #3498db;
+    border-radius: 50%;
+    /* color: #f0f0f0 !important; */
+ }
+   audio::-webkit-media-controls-play-button:hover{
+    background-color: #02253c;
+ 
+ }
+ audio::-webkit-media-controls-timeline{
+    background-color: #3498db;
+    border-radius: 5px;
+    /* height: 5px; */
+
+ }
+ audio::-webkit-media-contols-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display{
+        color: #3498db;
+        font-weight: bold;
+        margin: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+/* audio::-webkit-media-controls-mute-button{
+    background-color: #3498db;
+    margin-left: 2px;
+    border-radius: 50%;
+}
+     */
+
+
+ audio::-webkit-media-contols-current-time-display,
+     audio::-webkit-media-controls-volume-slider{
+filter: brightness(0.1) !important;
+     }
+     .custom_audio_player{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: #f0f0f0;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #3498db;
+     }
+     .play_button,.mute_btn{
+        background-color: #3498db;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f0f0f0;
+        cursor: pointer;
+        text-align: center;
+     }
+     .progress_bar{
+        flex-grow: 1;
+     }
+     .progress_bar,.volume_slider{
+        height: 5px;
+        cursor: pointer;
+     }
+     .play_button{
+      transition: transform 0.2s;
+     }
+     .play_button:hover{
+      transform: scale(1.1);
+     }

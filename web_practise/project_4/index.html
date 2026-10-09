@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <video src="../media/video/video.mp4" controls></video> -->
+     <div class="custom_video_player">
+        <video src="../media/video/video.mp4" id="custom_video"></video>
+        <div class="controls">
+            <button class="btn-play">&#9654;</button>
+            <input type="range" title="timeline" name="title" class="timeline"  id="timeline" value="0">
+            <button class="btn-fullscreen" >&#9974</button>
+        </div>
+    </div>
+    <script>
+        const video = document.getElementById('custom_video');
+        const playBtn = document.querySelector('.btn-play');
+        const timeline = document.getElementById('timeline');
+        const fullscreenBtn = document.querySelector('.btn-fullscreen');
+
+        playBtn.addEventListener('click', () => {
+            if(video.paused){
+                video.play();
+                playBtn.innerHTML = '&#10073;&#10073;'; // Pause icon
+            } else {
+                video.pause();
+                playBtn.innerHTML = '&#9654;'; // Play icon
+            }
+        });
+
+        video.addEventListener('timeupdate', () => {
+            timeline.value = (video.currentTime / video.duration) * 100;
+        });
+
+        timeline.addEventListener('input', () => {
+            video.currentTime = (timeline.value / 100) * video.duration;
+        });
+
+        fullscreenBtn.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { /* Firefox */
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { /* IE/Edge */
+                video.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

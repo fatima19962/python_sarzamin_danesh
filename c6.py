@@ -1,0 +1,12 @@
+s=input("enter a string")
+print("len is ",len(s))
+s=s.swapcase()
+print(s)
+s1=input("enter a string")
+print("count is",s.count(s1))
+old=input("enter old string")
+new=input("enter new string")
+s=s.replace(old,new)
+words=s.split('')
+for i in words:
+    print(i,end='  ')

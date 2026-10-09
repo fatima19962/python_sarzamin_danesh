@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starbucks UI</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">STARBUCKS</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#drinks">Drinks</a>
+        <a href="#popular">Popular</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>WHAT'S YOURS?</h1>
+        <p>Frappuccino Coffee Delight with rich flavor and smooth texture.</p>
+        <button class="primary-btn">Order Now</button>
+    </div>
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1587738347111-12b82e7baf3f" alt="frappuccino">
+    </div>
+</section>
+
+<section id="drinks" class="products">
+    <h2>Our Drinks</h2>
+    <div class="product-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+            <h3>Mocha Frapp</h3>
+            <p>$6.49</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+            <h3>Caramel Latte</h3>
+            <p>$5.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096">
+            <h3>Vanilla Brew</h3>
+            <p>$4.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section id="popular" class="popular">
+    <h2>Popular</h2>
+    <div class="popular-grid">
+        <div class="popular-card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+            <h4>Mocha Brew</h4>
+        </div>
+        <div class="popular-card">
+            <img src="https://images.unsplash.com/photo-1521305916504-4a1121188589">
+            <h4>Vanilla Latte</h4>
+        </div>
+        <div class="popular-card">
+            <img src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad03">
+            <h4>Cold Coffee</h4>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Submit</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Starbucks Inspired UI</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

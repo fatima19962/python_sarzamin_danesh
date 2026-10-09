@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#063d32;
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#042f27;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar a{
+    margin:0 15px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+.logo{
+    font-weight:700;
+    font-size:20px;
+}
+
+.cart-btn{
+    background:#1db954;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+    color:white;
+}
+
+/* Hero */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 10%;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    margin-bottom:20px;
+    color:#cde5dc;
+}
+
+.primary-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#1db954;
+    color:white;
+    cursor:pointer;
+}
+
+.hero-img img{
+    width:350px;
+    border-radius:20px;
+}
+
+/* Products */
+.products{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.product-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:#0a4f41;
+    padding:20px;
+    border-radius:20px;
+    width:250px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.card button{
+    margin-top:15px;
+    padding:8px 20px;
+    border:none;
+    border-radius:20px;
+    background:#1db954;
+    color:white;
+    cursor:pointer;
+}
+
+/* Popular */
+.popular{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.popular-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+.popular-card{
+    background:#0a4f41;
+    padding:20px;
+    border-radius:20px;
+    width:200px;
+}
+
+.popular-card img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* Contact */
+.contact{
+    padding:80px 10%;
+    display:flex;
+    justify-content:center;
+}
+
+.contact-form{
+    background:#0a4f41;
+    padding:40px;
+    border-radius:20px;
+    width:400px;
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    margin:10px 0;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+}
+
+.contact-form button{
+    margin-top:15px;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:#1db954;
+    color:white;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#042f27;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-img img{
+        margin-top:30px;
+    }
+}
